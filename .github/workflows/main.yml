@@ -13,5 +13,5 @@ jobs:
         with:
           domain: 'quick-hydrant.surge.sh'
           project: '.'
-          login: ${{ secrets.LOGIN }}
-          token: ${{ secrets.SURGE }}
+          login: ${{ secrets.login }}
+          token: ${{ secrets.surge }}
