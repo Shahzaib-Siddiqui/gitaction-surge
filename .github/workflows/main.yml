@@ -1,16 +1,33 @@
-name: Deploy Surge Website   
-on: [push]   
+# name: Deploy Surge Website   
+# on: [push]   
+# jobs:
+#        build:                           
+#            runs-on: ubuntu-latest 
+#            name: Deploying to surge 
+#            steps:    
+#            - uses: actions/checkout@v2 
+#            - name: Install Node.js
+#              uses: actions/setup-node@v2-beta
+#              with: 
+#                node-version: 12 
+#            - name: Install Surge
+#              run: npm install --global surge  
+#            - name: Run surge
+#              run: surge ./ heartbreaking-profit.surge.sh --token ${{ secrets.SURGE }}
+
+name: My workflow
+
+on: push
+
 jobs:
-       build:                           
-           runs-on: ubuntu-latest 
-           name: Deploying to surge 
-           steps:    
-           - uses: actions/checkout@v2 
-           - name: Install Node.js
-             uses: actions/setup-node@v2-beta
-             with: 
-               node-version: 12 
-           - name: Install Surge
-             run: npm install --global surge  
-           - name: Run surge
-             run: surge ./ heartbreaking-profit.surge.sh --token ${{ secrets.SURGE }}
+  my-job:
+    name: My job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to heartbreaking-profit.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'heartbreaking-profit.surge.sh'
+          project: './'
+          login: ${{ secrets.LOGIN }}
+          token: ${{ secrets.SURGE }}
