@@ -11,7 +11,7 @@ jobs:
       - name: Deploy to quick-hydrant.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'quick-hydrant.surge.sh'
-          project: '.'
+          domain: quick-hydrant.surge.sh
+          project: .
           login: ${{ secrets.login }}
           token: ${{ secrets.surge }}
