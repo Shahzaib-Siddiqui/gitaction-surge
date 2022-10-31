@@ -13,4 +13,4 @@ jobs:
         with:
           domain: 'tawdry-friction.surge.sh'
           project: '.'
-          token: f1038b2c58e1db221ac665594d99432f
+          token: ${{ secrets.surge }}
