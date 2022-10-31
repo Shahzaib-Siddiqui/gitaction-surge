@@ -8,9 +8,9 @@ jobs:
     name: My job
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to tawdry-friction.surge.sh
+      - name: Deploy to quick-hydrant.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'tawdry-friction.surge.sh'
+          domain: 'quick-hydrant.surge.sh'
           project: '.'
           token: ${{ secrets.surge }}
