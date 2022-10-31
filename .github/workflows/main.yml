@@ -28,6 +28,6 @@ jobs:
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'heartbreaking-profit.surge.sh'
-          project: '../../index.html'
+          project: ./
           login: ${{ secrets.LOGIN }}
           token: ${{ secrets.SURGE }}
