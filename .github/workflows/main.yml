@@ -9,10 +9,10 @@ jobs:
     name: My job
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to quick-hydrant.surge.sh
+      - name: Deploy to heartbreaking-profit.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'quick-hydrant.surge.sh'
+          domain: 'heartbreaking-profit.surge.sh'
           project: '.'
           login: ${{ secrets.LOGIN }}
           token: ${{ secrets.SURGE }}
