@@ -12,7 +12,7 @@ jobs:
       - name: Deploy to heartbreaking-profit.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: heartbreaking-profit.surge.sh
-          project: .
+          domain: 'heartbreaking-profit.surge.sh'
+          project: '.'
           login: ${{ secrets.LOGIN }}
           token: ${{ secrets.SURGE }}
