@@ -18,4 +18,4 @@ jobs:
            - name: Install Surge
              run:npm install --global surge  
            - name: Run surge
-             run: surge ./build myreact_mk.surge.sh --token ${{ secrets.SURGE }}
+             run: surge ./build heartbreaking-profit.surge.sh --token ${{ secrets.SURGE }}
