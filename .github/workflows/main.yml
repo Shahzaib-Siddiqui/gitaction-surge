@@ -2,7 +2,8 @@ name: My workflow
 
 on: 
   push:
-    branches:  ['master']
+    branches:  
+        - master
 jobs:
   my-job:
     name: My job
@@ -11,7 +12,7 @@ jobs:
       - name: Deploy to quick-hydrant.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: quick-hydrant.surge.sh
-          project: .
+          domain: 'quick-hydrant.surge.sh'
+          project: '.'
           login: ${{ secrets.LOGIN }}
           token: ${{ secrets.SURGE }}
