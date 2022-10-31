@@ -2,8 +2,7 @@ name: My workflow
 
 on: 
   push:
-    branches:
-    - master
+    branches:  ['master']
 jobs:
   my-job:
     name: My job
